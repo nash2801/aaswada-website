@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Menu Catalog | Aaswada</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400;1,900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed-dim": "#ed8b24",
+                        "tertiary-dim": "#3a5820",
+                        "surface": "#fef5ed",
+                        "primary-container": "#fe9832",
+                        "inverse-on-surface": "#a39c95",
+                        "outline": "#7c766f",
+                        "secondary": "#984125",
+                        "secondary-fixed-dim": "#ffb199",
+                        "tertiary-fixed-dim": "#c6eba3",
+                        "on-secondary": "#ffefeb",
+                        "on-primary-fixed-variant": "#592e00",
+                        "primary": "#8b4b00",
+                        "surface-bright": "#fef5ed",
+                        "on-secondary-fixed-variant": "#89371c",
+                        "on-tertiary-fixed-variant": "#4c6b31",
+                        "surface-container": "#f0e7de",
+                        "primary-fixed": "#fe9832",
+                        "secondary-dim": "#88361b",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#d4fab0",
+                        "surface-variant": "#e5dbd1",
+                        "tertiary-fixed": "#d4fab0",
+                        "surface-dim": "#ddd3c8",
+                        "surface-tint": "#8b4b00",
+                        "surface-container-low": "#f8efe7",
+                        "error-dim": "#b92902",
+                        "on-secondary-fixed": "#631b03",
+                        "inverse-primary": "#fe9832",
+                        "on-primary-container": "#4d2700",
+                        "error": "#b02500",
+                        "surface-container-high": "#ebe1d7",
+                        "on-error-container": "#520c00",
+                        "background": "#fef5ed",
+                        "on-error": "#ffefec",
+                        "on-tertiary-container": "#426128",
+                        "secondary-fixed": "#ffc4b3",
+                        "on-primary": "#fff0e6",
+                        "error-container": "#f95630",
+                        "tertiary": "#45642b",
+                        "secondary-container": "#ffc4b3",
+                        "surface-container-highest": "#e5dbd1",
+                        "on-tertiary": "#d9feb5",
+                        "on-secondary-container": "#7d2e14",
+                        "on-background": "#322e29",
+                        "primary-dim": "#7a4100",
+                        "on-primary-fixed": "#291200",
+                        "on-surface-variant": "#605b55",
+                        "on-surface": "#322e29",
+                        "inverse-surface": "#110e09",
+                        "on-tertiary-fixed": "#314e17",
+                        "outline-variant": "#b3aca5"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+        }
+        .linen-texture {
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDeqLLk3bB2ZvV0nWHHUnHUNEUXLtKolJjzu8R3EGvSUdjkaTDQc22OnWhZLVtUETQRAQjxZpAiCkZVUBmKE3r0kfJMhgj8piGxnqV82_9ihfd1qrzmcpvJ3zn3wp6pYY7fFelrQS71HfJQfSW7BwxdjB0h9B1L_Uc0pZ0H0JKf_V9Yxi7TA_lH5BG_W10REhBLFtTJvw3uN_rUPYKxKv2ZuT8y_NBDLyXyNxP74H633DSQ5-4domJtKO12f3cA_kWqMs5FDANavX5g)
+        }
+        .paisley-mask {
+            mask-image: url("data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path d=\"M50 0C22.4 0 0 22.4 0 50s22.4 50 50 50 50-22.4 50-50S77.6 0 50 0zm0 90C27.9 90 10 72.1 10 50S27.9 10 50 10s40 17.9 40 40-17.9 40-40 40z\"/></svg>");
+            mask-repeat: no-repeat;
+            mask-size: contain
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-orange-50/80 dark:bg-stone-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-serif font-black text-orange-900 dark:text-orange-100 italic">Aaswada</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-stone-700 dark:text-stone-300 hover:text-orange-800 dark:hover:text-orange-400 transition-colors duration-400" href="#">Home</a>
+<a class="text-orange-800 dark:text-orange-400 border-b-2 border-orange-800 dark:border-orange-400 pb-1" href="#">Menu</a>
+<a class="text-stone-700 dark:text-stone-300 hover:text-orange-800 dark:hover:text-orange-400 transition-colors duration-400" href="#">Our Story</a>
+<a class="text-stone-700 dark:text-stone-300 hover:text-orange-800 dark:hover:text-orange-400 transition-colors duration-400" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<div class="relative group">
+<span class="material-symbols-outlined text-orange-800 dark:text-orange-400 cursor-pointer p-2 rounded-full hover:bg-orange-100/50 dark:hover:bg-stone-800/50 transition-all duration-400">shopping_bag</span>
+<span class="absolute top-0 right-0 bg-primary text-on-primary text-[10px] font-bold px-1.5 py-0.5 rounded-full">3</span>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<header class="relative w-full h-[614px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Spices and tools" class="w-full h-full object-cover opacity-90 scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2sWxt8mX4qWIw4bhk-K2UkU4O6kz6CTRvCGjXLeSx-ImY6ILcNVEabzdE2HmR8UlVkLA-dMLKsAK5YKEZrBFqO_x5m2se9r7Ca6q70LfnY0foYMBqkUhJj0I7JxwZyeTioKKFBYMUjMdpsoK13MPxnoOyBHmyPGe7VTE8lfCuAfzYnONhdvYoU_u9gU7Ns-IxSz1BDwZyddzNAYHzsyNjtVv_bgHck5gBRs5y_dKMNHnjpZaaUzj_tH1XlxhKSz12DTKhXJR3SOao"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-2xl">
+<span class="inline-block px-3 py-1 bg-tertiary-container text-on-tertiary-container text-xs font-bold tracking-widest uppercase mb-6 rounded-sm">Handcrafted Since 1948</span>
+<h1 class="font-headline text-6xl md:text-7xl font-black text-on-surface leading-tight tracking-tight mb-6 italic">
+                        Our Artisanal <br/>Catalog
+                    </h1>
+<p class="text-lg md:text-xl text-on-surface-variant leading-relaxed font-light max-w-xl">
+                        Discover the essence of sun-dried masalas and generational secrets. Each blend is a testament to heritage, crafted with patience and stone-ground perfection.
+                    </p>
+<div class="mt-10 flex items-center space-x-6">
+<button class="bg-primary text-on-primary px-8 py-4 font-bold text-sm tracking-widest uppercase rounded-sm hover:opacity-90 transition-all flex items-center gap-2 shadow-lg shadow-primary/20">
+                            Explore Collections <span class="material-symbols-outlined">arrow_downward</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Category Tabs -->
+<section class="py-12 bg-surface-container-low linen-texture sticky top-[72px] z-40">
+<div class="max-w-7xl mx-auto px-8 flex justify-center">
+<div class="inline-flex p-1 bg-surface-container-highest rounded-xl">
+<button class="px-8 py-3 rounded-xl text-sm font-medium text-on-surface-variant hover:text-primary transition-all">
+                        Savory Snacks
+                    </button>
+<button class="px-8 py-3 rounded-xl text-sm font-bold transition-all bg-surface-container-lowest text-primary shadow-sm">
+                        Artisanal Masala Powders
+                    </button>
+</div>
+</div>
+</section>
+<!-- Savory Snacks Section -->
+<section class="py-24 max-w-7xl mx-auto px-8">
+<div class="flex items-baseline justify-between mb-16">
+<div>
+<h2 class="font-headline text-4xl font-bold text-on-surface mb-2">Savory Snacks</h2>
+<p class="text-on-surface-variant">The perfect accompaniments for your evening tea.</p>
+</div>
+<div class="h-px flex-grow mx-12 bg-outline-variant/15"></div>
+<div class="flex items-center gap-2 text-tertiary font-bold text-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+                    100% ORGANIC &amp; PURE
+                </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Card 1 -->
+<div class="group flex flex-col bg-surface-container-lowest p-5 rounded-xl transition-all duration-500 hover:-translate-y-2">
+<div class="relative overflow-hidden aspect-[4/5] rounded-xl mb-6">
+<img alt="Spring Rolls" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDId4jnrz1pLx-Nu84wbvJ2md0q1CsfYq_W5N2zCL1ei1jYkCZqQKPLpvKGlwnNG3-mzxfg3Z1SX_9H2U7AEeOh8shGwVEn31VCfOEEntGmKVcAq-AD1xfThuEil8fL1ZwZKpf6GrVSvzN7lHeWWZfiZv1SIQ7g372otr2XkWmWzWw60qHsmlj0W2R-P_8H8vu9Tr_0gRIYCHRJICBWPaxQ-sIekfTyAht6JWCo_Okc1UV7qRAFOxJYuCq0d21xzyrjpJcgRe4J8x5_"/>
+<div class="absolute top-4 right-4 bg-surface/90 backdrop-blur px-3 py-1 rounded-full text-xs font-black text-secondary">₹180</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-2xl font-bold">Spring Rolls</h3>
+<span class="text-[10px] text-outline font-mono">BATCH #HK-221</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                            Hand-rolled thin pastry filled with farm-fresh vegetables and secret heritage spices, wok-fried to a golden crunch.
+                        </p>
+</div>
+<button class="w-full py-4 border border-outline/20 text-primary font-bold text-xs tracking-widest uppercase hover:bg-primary hover:text-on-primary transition-all rounded-sm flex items-center justify-center gap-2">
+                        Add to Bag <span class="material-symbols-outlined text-base">shopping_cart</span>
+</button>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col bg-surface-container-lowest p-5 rounded-xl transition-all duration-500 hover:-translate-y-2">
+<div class="relative overflow-hidden aspect-[4/5] rounded-xl mb-6">
+<img alt="Cheese Balls" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSpcpeVEGu7qfToUOS6d1aPafWeicpPyhoopODqj8IImrnkMvLPrFscuslG4nbV75x7gn35FlJ3QqaTcZbSYZiJI-ig4ADEOGmnXwgyQXrEmL23TAcN_ext_uWzpWN0lK_1q8B2ZKAYP_U2QFMhc2Lj8zus03xCAUTu1Snk_vA3q9EQYG4KdLsSgm6CixBNDe3YVG2iqcZV7OFxqL-fqP4ZOfC4le1rhFoqHQfNcsZ7yWTJRqja-HW-fYrHvGvnij5uu0-adXaDBre"/>
+<div class="absolute top-4 right-4 bg-surface/90 backdrop-blur px-3 py-1 rounded-full text-xs font-black text-secondary">₹210</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-2xl font-bold">Cheese Balls</h3>
+<span class="text-[10px] text-outline font-mono">BATCH #HK-118</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                            A fusion delight featuring aged cheddar and local cottage cheese, infused with sun-dried chili flakes.
+                        </p>
+</div>
+<button class="w-full py-4 border border-outline/20 text-primary font-bold text-xs tracking-widest uppercase hover:bg-primary hover:text-on-primary transition-all rounded-sm flex items-center justify-center gap-2">
+                        Add to Bag <span class="material-symbols-outlined text-base">shopping_cart</span>
+</button>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col bg-surface-container-lowest p-5 rounded-xl transition-all duration-500 hover:-translate-y-2">
+<div class="relative overflow-hidden aspect-[4/5] rounded-xl mb-6">
+<img alt="Heritage Sandwich" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8VboulI894qwN-INDe-VWSRMYQqDRFmNsyKrgZgBh7zpndyXFLGmWpNQo095T0-25zYPJ3tIKMWyX53q4XfrxJVn1sOV1b5RILbyvUDbDGoj9ToTCE0SBiqzRwyIaWGpGeOOflaTQNTRAfaKK9fwM5c3ig_jVdj4DXBZiotSg79rlI0u878vJdefy3dB26ZFHPKjdbNiLKgcKWjCrk6hTnVj38QqcJ67TyugdB8G3KqIMNRwKDMT9TODF4y-NKcWWxQJfNzoaGf94"/>
+<div class="absolute top-4 right-4 bg-surface/90 backdrop-blur px-3 py-1 rounded-full text-xs font-black text-secondary">₹150</div>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline text-2xl font-bold">Heritage Sandwich</h3>
+<span class="text-[10px] text-outline font-mono">BATCH #HK-304</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                            Three layers of artisanal bread with mint chutney, heirloom tomatoes, and spiced potato filling.
+                        </p>
+</div>
+<button class="w-full py-4 border border-outline/20 text-primary font-bold text-xs tracking-widest uppercase hover:bg-primary hover:text-on-primary transition-all rounded-sm flex items-center justify-center gap-2">
+                        Add to Bag <span class="material-symbols-outlined text-base">shopping_cart</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Masala Powders Section -->
+<section class="py-24 bg-surface-container-low relative overflow-hidden">
+<!-- Subtle Watermark -->
+<div class="absolute -right-20 top-20 opacity-5 pointer-events-none paisley-mask bg-on-surface w-96 h-96"></div>
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="flex items-baseline justify-between mb-16">
+<div>
+<h2 class="font-headline text-4xl font-bold text-on-surface mb-2 italic">Artisanal Masala Powders</h2>
+<p class="text-on-surface-variant">Sun-dried, stone-ground, and packed with heritage.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Groundnut Powder -->
+<div class="bg-surface p-8 border-l-4 border-secondary/20"><div class="relative overflow-hidden aspect-video rounded-sm mb-6"><img alt="Groundnut Powder" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD89_8y48qZ9m0X-54_69G7r5X1164993_45678901234567890"/></div>
+<h4 class="font-headline text-xl font-bold mb-3">Groundnut Powder</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            Slow-roasted peanuts ground with dry red chilies and garlic. A staple for every South Indian kitchen.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-secondary font-black">₹120 <small class="text-[10px] font-normal text-outline">/ 200g</small></span>
+<button class="text-primary font-bold text-xs uppercase tracking-tighter hover:underline">View Details</button>
+</div>
+</div>
+<!-- Chef's Special: Bisi Belle Bath Powder -->
+<div class="md:col-span-1 md:row-span-1 bg-primary text-on-primary p-8 rounded-xl shadow-2xl shadow-primary/30 relative transform md:scale-105 z-20 overflow-hidden">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary-container/20 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<span class="inline-block px-2 py-1 bg-white/20 rounded text-[10px] font-bold tracking-widest uppercase mb-4">Chef's Special Recommendation</span>
+<h4 class="font-headline text-3xl font-black mb-4 leading-tight">Bisi Belle Bath Powder</h4>
+<p class="text-on-primary/80 text-sm leading-relaxed mb-8">
+                                A complex blend of 18 hand-selected spices, including Marati Moggu and Kapok Buds. Authentic flavor of the Mysore royalty.
+                            </p>
+<div class="flex items-center justify-between">
+<span class="text-2xl font-black italic">₹240</span>
+<button class="bg-on-primary text-primary px-6 py-3 rounded-sm font-bold text-xs tracking-widest uppercase hover:bg-surface-container transition-all">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Rasam Powder -->
+<div class="bg-surface p-8 border-l-4 border-tertiary/20"><div class="relative overflow-hidden aspect-video rounded-sm mb-6"><img alt="Rasam Powder" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD89_8y48qZ9m0X-54_69G7r5X1164993_45678901234567891"/></div>
+<h4 class="font-headline text-xl font-bold mb-3">Rasam Powder</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            Tangy, peppery, and incredibly aromatic. Made with premium peppercorns and sun-dried curry leaves.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-secondary font-black">₹145 <small class="text-[10px] font-normal text-outline">/ 150g</small></span>
+<button class="text-primary font-bold text-xs uppercase tracking-tighter hover:underline">View Details</button>
+</div>
+</div>
+<!-- Idli / Gun powder -->
+<div class="bg-surface p-8 border-l-4 border-primary/20"><div class="relative overflow-hidden aspect-video rounded-sm mb-6"><img alt="Idli Powder" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD89_8y48qZ9m0X-54_69G7r5X1164993_45678901234567892"/></div>
+<h4 class="font-headline text-xl font-bold mb-3">Idli / Gun powder</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            The perfect spicy accompaniment for soft idlis, made with lentils and premium dried chilies.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-secondary font-black">₹130 <small class="text-[10px] font-normal text-outline">/ 200g</small></span>
+<button class="text-primary font-bold text-xs uppercase tracking-tighter hover:underline">View Details</button>
+</div>
+</div>
+<!-- Subzi Masala -->
+<div class="bg-surface p-8 border-l-4 border-secondary/20"><div class="relative overflow-hidden aspect-video rounded-sm mb-6"><img alt="Subzi Masala" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD89_8y48qZ9m0X-54_69G7r5X1164993_45678901234567893"/></div>
+<h4 class="font-headline text-xl font-bold mb-3">Subzi Masala</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            An all-purpose aromatic blend designed to enhance any everyday vegetable curry with rich heritage flavor.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-secondary font-black">₹110 <small class="text-[10px] font-normal text-outline">/ 100g</small></span>
+<button class="text-primary font-bold text-xs uppercase tracking-tighter hover:underline">View Details</button>
+</div>
+</div>
+<!-- Punjabi Chole Masala -->
+<div class="bg-surface p-8 border-l-4 border-tertiary/20"><div class="relative overflow-hidden aspect-video rounded-sm mb-6"><img alt="Chole Masala" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD89_8y48qZ9m0X-54_69G7r5X1164993_45678901234567894"/></div>
+<h4 class="font-headline text-xl font-bold mb-3">Punjabi Chole Masala</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            Authentic spice mix for dark, tangy, and flavorful chickpeas. Experience the heart of North India.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-secondary font-black">₹165 <small class="text-[10px] font-normal text-outline">/ 150g</small></span>
+<button class="text-primary font-bold text-xs uppercase tracking-tighter hover:underline">View Details</button>
+</div>
+</div>
+<!-- Pulihora Paste -->
+<div class="bg-surface p-8 border-l-4 border-primary/20"><div class="relative overflow-hidden aspect-video rounded-sm mb-6"><img alt="Pulihora Paste" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD89_8y48qZ9m0X-54_69G7r5X1164993_45678901234567895"/></div>
+<h4 class="font-headline text-xl font-bold mb-3">Pulihora Paste</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            Traditional tamarind-based concentrate with mustard seeds and peanuts for instant tangy rice.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-secondary font-black">₹185 <small class="text-[10px] font-normal text-outline">/ 250g</small></span>
+<button class="text-primary font-bold text-xs uppercase tracking-tighter hover:underline">View Details</button>
+</div>
+</div>
+<!-- Chat Masala -->
+<div class="bg-surface p-8 border-l-4 border-secondary/20"><div class="relative overflow-hidden aspect-video rounded-sm mb-6"><img alt="Chat Masala" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD89_8y48qZ9m0X-54_69G7r5X1164993_45678901234567896"/></div>
+<h4 class="font-headline text-xl font-bold mb-3">Chat Masala</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            Tangy and zingy sprinkler made with amchur and black salt. Elevates every street food snack.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-secondary font-black">₹95 <small class="text-[10px] font-normal text-outline">/ 100g</small></span>
+<button class="text-primary font-bold text-xs uppercase tracking-tighter hover:underline">View Details</button>
+</div>
+</div>
+<!-- Puthana Powder -->
+<div class="bg-surface p-8 border-l-4 border-tertiary/20"><div class="relative overflow-hidden aspect-video rounded-sm mb-6"><img alt="Puthana Powder" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD89_8y48qZ9m0X-54_69G7r5X1164993_45678901234567897"/></div>
+<h4 class="font-headline text-xl font-bold mb-3">Puthana Powder</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            Roasted Bengal gram powder mixed with garlic and spices. High in protein and rich in tradition.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-secondary font-black">₹115 <small class="text-[10px] font-normal text-outline">/ 200g</small></span>
+<button class="text-primary font-bold text-xs uppercase tracking-tighter hover:underline">View Details</button>
+</div>
+</div>
+<!-- Metkut Powder -->
+<div class="bg-surface p-8 border-l-4 border-primary/20"><div class="relative overflow-hidden aspect-video rounded-sm mb-6"><img alt="Metkut Powder" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD89_8y48qZ9m0X-54_69G7r5X1164993_45678901234567898"/></div>
+<h4 class="font-headline text-xl font-bold mb-3">Metkut Powder</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            Traditional Maharashtrian comfort blend of lentils, rice, and spices. Best served with hot rice and ghee.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-secondary font-black">₹140 <small class="text-[10px] font-normal text-outline">/ 150g</small></span>
+<button class="text-primary font-bold text-xs uppercase tracking-tighter hover:underline">View Details</button>
+</div>
+</div>
+<!-- Karvepak Powder -->
+<div class="bg-surface p-8 border-l-4 border-secondary/20"><div class="relative overflow-hidden aspect-video rounded-sm mb-6"><img alt="Karvepak Powder" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD89_8y48qZ9m0X-54_69G7r5X1164993_45678901234567899"/></div>
+<h4 class="font-headline text-xl font-bold mb-3">Karvepak Powder</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            Intense curry leaf spice mix. A nutritious and aromatic staple for a healthy daily diet.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-secondary font-black">₹155 <small class="text-[10px] font-normal text-outline">/ 200g</small></span>
+<button class="text-primary font-bold text-xs uppercase tracking-tighter hover:underline">View Details</button>
+</div>
+</div>
+<!-- Pav Bhaji Masala -->
+<div class="bg-surface p-8 border-l-4 border-tertiary/20"><div class="relative overflow-hidden aspect-video rounded-sm mb-6"><img alt="Pav Bhaji Masala" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD89_8y48qZ9m0X-54_69G7r5X1164993_45678901234567900"/></div>
+<h4 class="font-headline text-xl font-bold mb-3">Pav Bhaji Masala</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            A robust spice blend for the perfect buttery Mumbai-style pav bhaji. Rich in color and aroma.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-secondary font-black">₹135 <small class="text-[10px] font-normal text-outline">/ 100g</small></span>
+<button class="text-primary font-bold text-xs uppercase tracking-tighter hover:underline">View Details</button>
+</div>
+</div>
+<!-- Biryani Masala -->
+<div class="bg-surface p-8 border-l-4 border-primary/20"><div class="relative overflow-hidden aspect-video rounded-sm mb-6"><img alt="Biryani Masala" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD89_8y48qZ9m0X-54_69G7r5X1164993_45678901234567901"/></div>
+<h4 class="font-headline text-xl font-bold mb-3">Biryani Masala</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            Royal blend of whole spices and shahi jeera. Creates an irresistible fragrance and authentic taste.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-secondary font-black">₹220 <small class="text-[10px] font-normal text-outline">/ 100g</small></span>
+<button class="text-primary font-bold text-xs uppercase tracking-tighter hover:underline">View Details</button>
+</div>
+</div>
+<!-- Flax Seed Masala -->
+<div class="bg-surface p-8 border-l-4 border-secondary/20"><div class="relative overflow-hidden aspect-video rounded-sm mb-6"><img alt="Flax Seed Masala" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD89_8y48qZ9m0X-54_69G7r5X1164993_45678901234567902"/></div>
+<h4 class="font-headline text-xl font-bold mb-3">Flax Seed Masala</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            A healthy blend of roasted flax seeds and dry spices. Perfect as a nutritious sprinkle on any meal.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-secondary font-black">₹170 <small class="text-[10px] font-normal text-outline">/ 200g</small></span>
+<button class="text-primary font-bold text-xs uppercase tracking-tighter hover:underline">View Details</button>
+</div>
+</div>
+<!-- Dosa Powder Chutney -->
+<div class="bg-surface p-8 border-l-4 border-tertiary/20"><div class="relative overflow-hidden aspect-video rounded-sm mb-6"><img alt="Dosa Powder Chutney" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD89_8y48qZ9m0X-54_69G7r5X1164993_45678901234567903"/></div>
+<h4 class="font-headline text-xl font-bold mb-3">Dosa Powder Chutney</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            Specially crafted coarse powder to sprinkle on Dosas while cooking. Adds a delightful spicy crunch.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-secondary font-black">₹145 <small class="text-[10px] font-normal text-outline">/ 200g</small></span>
+<button class="text-primary font-bold text-xs uppercase tracking-tighter hover:underline">View Details</button>
+</div>
+</div>
+<!-- Nallakaram Powder -->
+<div class="bg-surface p-8 border-l-4 border-primary/20"><div class="relative overflow-hidden aspect-video rounded-sm mb-6"><img alt="Nallakaram Powder" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD89_8y48qZ9m0X-54_69G7r5X1164993_45678901234567904"/></div>
+<h4 class="font-headline text-xl font-bold mb-3">Nallakaram Powder</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            Traditional 'Black Powder' from Andhra made with tamarind, chilies, and curry leaves. Intensely flavorful.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-secondary font-black">₹160 <small class="text-[10px] font-normal text-outline">/ 200g</small></span>
+<button class="text-primary font-bold text-xs uppercase tracking-tighter hover:underline">View Details</button>
+</div>
+</div>
+<!-- Garam Masala -->
+<div class="bg-surface p-8 border-l-4 border-secondary/20"><div class="relative overflow-hidden aspect-video rounded-sm mb-6"><img alt="Garam Masala" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD89_8y48qZ9m0X-54_69G7r5X1164993_45678901234567905"/></div>
+<h4 class="font-headline text-xl font-bold mb-3">Garam Masala</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            Our signature warm spice blend. Stone-ground in small batches to preserve volatile oils and aroma.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-secondary font-black">₹190 <small class="text-[10px] font-normal text-outline">/ 100g</small></span>
+<button class="text-primary font-bold text-xs uppercase tracking-tighter hover:underline">View Details</button>
+</div>
+</div>
+<!-- Sambar Powder -->
+<div class="bg-surface p-8 border-l-4 border-tertiary/20"><div class="relative overflow-hidden aspect-video rounded-sm mb-6"><img alt="Sambar Powder" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD89_8y48qZ9m0X-54_69G7r5X1164993_45678901234567906"/></div>
+<h4 class="font-headline text-xl font-bold mb-3">Sambar Powder</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                            Traditional recipe using Byadgi chillies for that deep red color without the heat.
+                        </p>
+<div class="flex items-center justify-between mt-auto">
+<span class="text-secondary font-black">₹160 <small class="text-[10px] font-normal text-outline">/ 250g</small></span>
+<button class="text-primary font-bold text-xs uppercase tracking-tighter hover:underline">View Details</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Editorial Callout -->
+<section class="py-24 max-w-7xl mx-auto px-8">
+<div class="bg-surface-container rounded-sm p-16 flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2">
+<img alt="Spices and tools" class="rounded-sm shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMEJDsFdHAZswMzwIhTNP0x5BQ_3UPfrmaib6aQVNdVhSYWVuTpIDmn5kFnrmQ4zyooilBk2-3ZROr93cZX2A-sx0I-pNQkuB70UckZolp0pd8EdBvREFAo9FFiwkXM_zbxfRBBgjSQuxG1-d3ymlNOFd774MbjYkdGEVBWIA4-p6E21WrPmP1S7n05nMAlYsLkQkYfYv1TT6jBy7oDqnnVCYvcqC089H9Du7-0rHCsujP5PKTvkvSgzTh6dOjICOyoqN8-lbhcKkG"/>
+</div>
+<div class="w-full md:w-1/2">
+<h3 class="font-headline text-4xl font-bold mb-6">Join Our Heritage Circle</h3>
+<p class="text-on-surface-variant mb-8 leading-relaxed">
+                        Receive monthly recipes from our matriarch's journal and early access to limited-edition seasonal batches.
+                    </p>
+<div class="flex gap-4">
+<input class="flex-grow bg-transparent border-b-2 border-outline-variant focus:border-primary focus:ring-0 transition-all px-0 py-3 font-medium placeholder:text-outline-variant" placeholder="Your email address" type="email"/>
+<button class="text-primary font-black text-xs tracking-widest uppercase pb-1 border-b-2 border-primary">Subscribe</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-stone-200/15 dark:border-stone-800/15 bg-stone-100 dark:bg-stone-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 w-full max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-xl font-serif font-bold text-orange-900 dark:text-orange-100">Aaswada</div>
+<p class="font-sans text-sm tracking-wide text-stone-700 dark:text-stone-400">
+                    Preserving the soul of traditional Indian cuisine through artisanal spices and snacks.
+                </p>
+</div>
+<div class="flex flex-col space-y-4">
+<h5 class="text-orange-800 dark:text-orange-500 font-bold uppercase text-xs tracking-widest">Explore</h5>
+<a class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-all duration-400 hover:underline decoration-orange-800/30" href="#">Recipes</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-all duration-400 hover:underline decoration-orange-800/30" href="#">Ingredients</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-all duration-400 hover:underline decoration-orange-800/30" href="#">Our Farm</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h5 class="text-orange-800 dark:text-orange-500 font-bold uppercase text-xs tracking-widest">Company</h5>
+<a class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-all duration-400 hover:underline decoration-orange-800/30" href="#">Careers</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-all duration-400 hover:underline decoration-orange-800/30" href="#">Privacy Policy</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-all duration-400 hover:underline decoration-orange-800/30" href="#">Terms</a>
+</div>
+<div class="space-y-6">
+<h5 class="text-orange-800 dark:text-orange-500 font-bold uppercase text-xs tracking-widest">Find Us</h5>
+<p class="font-sans text-sm tracking-wide text-stone-700 dark:text-stone-400">
+                    Heritage Lane, Old Mysore Road<br/>
+                    Karnataka, India
+                </p>
+<div class="flex space-x-4">
+<span class="material-symbols-outlined text-orange-800 cursor-pointer">social_leaderboard</span>
+<span class="material-symbols-outlined text-orange-800 cursor-pointer">photo_camera</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 py-8 border-t border-stone-200/5">
+<p class="font-sans text-sm tracking-wide text-stone-700 dark:text-stone-400 text-center md:text-left">© 2024 Aaswada. Crafted with Tradition.</p>
+<p class="font-sans text-[11px] tracking-widest text-stone-500 dark:text-stone-500 text-center md:text-left mt-2 uppercase">FSSAI Lic no - 23624030002498</p>
+</div>
+</footer>
+</body></html>

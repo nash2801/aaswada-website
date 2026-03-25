@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Heritage Kitchen | Checkout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400;1,700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface": "#1b1c19",
+              "inverse-surface": "#30312e",
+              "inverse-primary": "#ffb596",
+              "surface": "#fbf9f4",
+              "on-primary-fixed-variant": "#76320f",
+              "secondary": "#775a19",
+              "on-background": "#1b1c19",
+              "on-secondary-fixed-variant": "#5d4201",
+              "on-secondary": "#ffffff",
+              "error": "#ba1a1a",
+              "surface-dim": "#dbdad5",
+              "secondary-container": "#fed488",
+              "on-secondary-fixed": "#261900",
+              "inverse-on-surface": "#f2f1ec",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-highest": "#e4e2dd",
+              "tertiary-fixed-dim": "#c6c6c6",
+              "surface-container-low": "#f5f3ee",
+              "on-error-container": "#93000a",
+              "primary": "#823b18",
+              "tertiary-fixed": "#e2e2e2",
+              "surface-bright": "#fbf9f4",
+              "on-primary-container": "#ffe1d6",
+              "on-tertiary-fixed-variant": "#454747",
+              "outline-variant": "#dac1b8",
+              "surface-container-high": "#eae8e3",
+              "on-primary-fixed": "#360f00",
+              "tertiary-container": "#666868",
+              "on-tertiary-fixed": "#1a1c1c",
+              "outline": "#87736b",
+              "on-tertiary-container": "#e7e7e7",
+              "surface-variant": "#e4e2dd",
+              "surface-tint": "#944925",
+              "surface-container": "#f0eee9",
+              "secondary-fixed-dim": "#e9c176",
+              "on-surface-variant": "#54433c",
+              "primary-fixed": "#ffdbcd",
+              "on-primary": "#ffffff",
+              "primary-container": "#a0522d",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#ffb596",
+              "tertiary": "#4e5050",
+              "secondary-fixed": "#ffdea5",
+              "on-secondary-container": "#785a1a",
+              "error-container": "#ffdad6",
+              "background": "#fbf9f4",
+              "on-tertiary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Noto Serif', serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopAppBar (Suppressed for focused checkout, but using branding from JSON) -->
+<header class="fixed top-0 w-full z-50 bg-[#fbf9f4] backdrop-blur-md border-none">
+<div class="flex justify-between items-center px-6 py-4 max-w-screen-2xl mx-auto">
+<button class="text-orange-900 transition-transform active:scale-95">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<span class="text-2xl font-bold text-orange-900 italic font-headline">Heritage Kitchen</span>
+<div class="w-6"></div> <!-- Spacer for balance -->
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-md mx-auto">
+<!-- Order Progress -->
+<div class="mb-10 flex items-center justify-between">
+<div class="flex flex-col items-center gap-2">
+<span class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold">1</span>
+<span class="text-[10px] uppercase tracking-widest font-bold text-primary">Shipping</span>
+</div>
+<div class="h-[1px] flex-1 bg-outline-variant/30 mx-4"></div>
+<div class="flex flex-col items-center gap-2">
+<span class="w-8 h-8 rounded-full border border-primary text-primary flex items-center justify-center text-xs font-bold">2</span>
+<span class="text-[10px] uppercase tracking-widest font-bold text-primary">Payment</span>
+</div>
+</div>
+<!-- Section: Order Summary -->
+<section class="mb-12">
+<h2 class="text-xl font-bold mb-6 text-on-surface">Review Your Selection</h2>
+<div class="space-y-6">
+<!-- Item 1 -->
+<div class="flex gap-4 items-center">
+<div class="w-20 h-20 bg-surface-container-low p-2 rounded-lg">
+<img alt="" class="w-full h-full object-cover rounded" data-alt="high-angle close up of small glass jar filled with rich dark Indian pickle surrounded by spices on wooden surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHBYSqfD8pi8wEhkbBI831bDtwEGSCexaSmIQtwlxR4VsZiiEHifQoB9a0Rq1X-vS_jW7TS6uySm5CbgHKVMczk7kyaxiSya2Eg_DNwD36fIcEA31mY9Uj_XUwK_QoapN7x-pDCBFN4n-O65G2czFNyFzuQrxW1DlikQg8ig_xyI-CrMBAqSrJQs6IsH5qMIT2cjGk4FmpwnUNImWVZjS72HxVB53smoedfWQurYZ8V0vUFFRK7lg2u3AIQpXplgg9crvIA_e3viEG"/>
+</div>
+<div class="flex-1">
+<h3 class="text-base font-bold text-on-surface">Vintage Mango Achar</h3>
+<p class="text-sm text-tertiary">350g • Small Batch</p>
+<div class="flex justify-between items-end mt-1">
+<span class="text-xs font-bold text-primary">Qty: 1</span>
+<span class="font-bold text-on-surface">₹750</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-4 items-center">
+<div class="w-20 h-20 bg-surface-container-low p-2 rounded-lg">
+<img alt="" class="w-full h-full object-cover rounded" data-alt="artisanal hand-woven spice pouch with traditional Indian embroidery on a warm neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2w5XdQQg5yRaOec-w7V52tjhmhTr2-y8APeuv5AU9d4TD89oSIsgRabx-cTa7RKOHLk6ieMvFnOveknVIm6SBTK0qqnWQcgGEIQcP14yztQI2FQ6XlVD5fUUmrrxY9kUG8pBjWwC9ufZ_yICot2krtZUErKgf9FRf2dQ_QtwgJBtzWdD_hQ9kSIxd6w4nC6WbExKqGEB4GGVLLEAk82q-z2Wyhgn2GcDkDs2X1IRGzMvzbgMEFB2WCl5wixocHnFH4IfMMGoNxyo0"/>
+</div>
+<div class="flex-1">
+<h3 class="text-base font-bold text-on-surface">Heritage Garam Masala</h3>
+<p class="text-sm text-tertiary">100g • Stone Ground</p>
+<div class="flex justify-between items-end mt-1">
+<span class="text-xs font-bold text-primary">Qty: 2</span>
+<span class="font-bold text-on-surface">₹440</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Totals -->
+<div class="mt-8 pt-8 border-t border-outline-variant/20 space-y-3">
+<div class="flex justify-between text-sm">
+<span class="text-tertiary">Subtotal</span>
+<span class="text-on-surface font-medium">₹1,190</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-tertiary">Shipping (Standard)</span>
+<span class="text-on-surface font-medium">₹80</span>
+</div>
+<div class="flex justify-between text-lg pt-2">
+<span class="font-bold text-on-surface">Total</span>
+<span class="font-black text-primary">₹1,270</span>
+</div>
+</div>
+</section>
+<!-- Section: Payment Methods -->
+<section>
+<h2 class="text-xl font-bold mb-6 text-on-surface">Secure Payment</h2>
+<div class="space-y-4">
+<!-- Paytm -->
+<label class="relative block group cursor-pointer">
+<input checked="" class="peer hidden" name="payment" type="radio" value="paytm"/>
+<div class="flex items-center justify-between p-5 rounded-xl bg-surface-container-low border border-transparent peer-checked:border-secondary transition-all active:scale-[0.98]">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-blue-600" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Paytm</p>
+<p class="text-[10px] uppercase tracking-widest text-tertiary">Indian Digital Wallet</p>
+</div>
+</div>
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant peer-checked:border-secondary flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary scale-0 transition-transform peer-checked:scale-100"></div>
+</div>
+</div>
+<!-- Selection Indicator for Peer Check -->
+<div class="absolute inset-0 rounded-xl ring-2 ring-secondary opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity"></div>
+</label>
+<!-- Google Pay -->
+<label class="relative block cursor-pointer">
+<input class="peer hidden" name="payment" type="radio" value="gpay"/>
+<div class="flex items-center justify-between p-5 rounded-xl bg-surface-container-low border border-transparent transition-all active:scale-[0.98]">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-green-600" data-icon="google">google</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">GPay</p>
+<p class="text-[10px] uppercase tracking-widest text-tertiary">Unified Payments Interface</p>
+</div>
+</div>
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary scale-0 transition-transform"></div>
+</div>
+</div>
+</label>
+<!-- PayPal -->
+<label class="relative block cursor-pointer">
+<input class="peer hidden" name="payment" type="radio" value="paypal"/>
+<div class="flex items-center justify-between p-5 rounded-xl bg-surface-container-low border border-transparent transition-all active:scale-[0.98]">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-blue-800" data-icon="payments">payments</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">PayPal</p>
+<p class="text-[10px] uppercase tracking-widest text-tertiary">International Orders</p>
+</div>
+</div>
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary scale-0 transition-transform"></div>
+</div>
+</div>
+</label>
+</div>
+</section>
+<!-- Voucher Code (Editorial Detail) -->
+<div class="mt-10">
+<label class="block text-[10px] font-bold uppercase tracking-widest text-tertiary mb-2 px-1">Heritage Member Code</label>
+<div class="flex gap-2">
+<input class="flex-1 bg-surface-container-low border-b border-outline-variant/30 px-4 py-3 text-sm focus:border-primary focus:ring-0 placeholder:text-outline/50 uppercase tracking-widest" placeholder="ENTER CODE" type="text"/>
+<button class="px-6 py-3 text-xs font-bold text-secondary border border-outline-variant/20 rounded hover:bg-surface-container-high transition-colors">APPLY</button>
+</div>
+</div>
+</main>
+<!-- Sticky Action Button -->
+<div class="fixed bottom-0 left-0 w-full bg-surface/80 backdrop-blur-xl p-6 border-t border-outline-variant/10 z-50">
+<div class="max-w-md mx-auto">
+<button class="w-full bg-primary text-white py-5 rounded-lg flex items-center justify-center gap-3 transition-transform active:scale-95 shadow-[0_8px_24px_rgba(130,59,24,0.15)]">
+<span class="text-sm font-bold uppercase tracking-[0.2em]">Complete Purchase</span>
+<span class="material-symbols-outlined text-lg" data-icon="lock">lock</span>
+</button>
+<p class="text-[10px] text-center mt-4 text-tertiary uppercase tracking-widest opacity-60">Secure SSL Encrypted Checkout</p>
+</div>
+</div>
+<!-- Minimal Footer Content from JSON Logic -->
+<footer class="mt-20 py-16 px-6 bg-[#f5f3ee] text-center border-t border-stone-200/20">
+<div class="max-w-md mx-auto space-y-6">
+<span class="font-noto-serif text-lg font-black text-stone-800 italic">Heritage Kitchen</span>
+<p class="text-[10px] font-manrope text-stone-500 tracking-widest uppercase leading-relaxed">
+                © 2024 Heritage Kitchen. Preserving the Curated Archive of Indian Flavors.
+            </p>
+<div class="flex flex-wrap justify-center gap-4 pt-4">
+<a class="text-[10px] tracking-widest uppercase font-medium text-stone-500" href="#">Shipping Policy</a>
+<a class="text-[10px] tracking-widest uppercase font-medium text-stone-500" href="#">Contact Us</a>
+</div>
+</div>
+</footer>
+</body></html>

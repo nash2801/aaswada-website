@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Heritage Kitchen | Feedback &amp; Recommendations</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface": "#1b1c19",
+              "inverse-surface": "#30312e",
+              "inverse-primary": "#ffb596",
+              "surface": "#fbf9f4",
+              "on-primary-fixed-variant": "#76320f",
+              "secondary": "#775a19",
+              "on-background": "#1b1c19",
+              "on-secondary-fixed-variant": "#5d4201",
+              "on-secondary": "#ffffff",
+              "error": "#ba1a1a",
+              "surface-dim": "#dbdad5",
+              "secondary-container": "#fed488",
+              "on-secondary-fixed": "#261900",
+              "inverse-on-surface": "#f2f1ec",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-highest": "#e4e2dd",
+              "tertiary-fixed-dim": "#c6c6c6",
+              "surface-container-low": "#f5f3ee",
+              "on-error-container": "#93000a",
+              "primary": "#823b18",
+              "tertiary-fixed": "#e2e2e2",
+              "surface-bright": "#fbf9f4",
+              "on-primary-container": "#ffe1d6",
+              "on-tertiary-fixed-variant": "#454747",
+              "outline-variant": "#dac1b8",
+              "surface-container-high": "#eae8e3",
+              "on-primary-fixed": "#360f00",
+              "tertiary-container": "#666868",
+              "on-tertiary-fixed": "#1a1c1c",
+              "outline": "#87736b",
+              "on-tertiary-container": "#e7e7e7",
+              "surface-variant": "#e4e2dd",
+              "surface-tint": "#944925",
+              "surface-container": "#f0eee9",
+              "secondary-fixed-dim": "#e9c176",
+              "on-surface-variant": "#54433c",
+              "primary-fixed": "#ffdbcd",
+              "on-primary": "#ffffff",
+              "primary-container": "#a0522d",
+              "on-error": "#ffffff",
+              "primary-fixed-dim": "#ffb596",
+              "tertiary": "#4e5050",
+              "secondary-fixed": "#ffdea5",
+              "on-secondary-container": "#785a1a",
+              "error-container": "#ffdad6",
+              "background": "#fbf9f4",
+              "on-tertiary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif", "serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24
+    }
+.display-lg {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 700
+    }
+.title-sm {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-weight: 600
+    }
+.body-lg {
+    font-size: 1.125rem;
+    line-height: 1.6
+    }
+.label-md {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em
+    }
+/* Parchment Texture Overlay */
+.parchment-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.03;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuD8-0e_gq8SR8vBaTidE63Fz6nKv5I8Be2Y2-J3CEMi1gnfInl4MLCsyTH3AvtGms0jnajzhNeX6v9p-nXKx_0-9R3sECicy7Y5ObwDn7EQVzfKRLIAvjtZGEZ0eik33OrcrODA0bLm3jABFMIUC_MOlQFQ3izG3WzrejK7Zu2FuxjocQpRdTwsPTp7awln0X-T1OU4GpovJiz44YpR0Su716gEBARoJ6ZLZRGnAZZY50wg5wcBmpQOJxZa1EMElrl0rkcMgV6Ya589);
+    z-index: 100
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<div class="parchment-overlay"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fbf9f4] dark:bg-stone-950/90 backdrop-blur-md">
+<nav class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-6">
+<button class="text-orange-900 dark:text-orange-200">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-orange-700 dark:hover:text-orange-300 transition-colors duration-300" href="#">The Archive</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-orange-700 dark:hover:text-orange-300 transition-colors duration-300" href="#">Artisanal Pantry</a>
+</div>
+</div>
+<a class="text-3xl font-bold text-orange-900 dark:text-orange-100 italic font-headline tracking-tighter" href="/">Heritage Kitchen</a>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-orange-700 dark:hover:text-orange-300 transition-colors duration-300" href="#">Our Story</a>
+<a class="text-orange-800 dark:text-orange-300 font-semibold border-b-2 border-orange-800 hover:text-orange-700 dark:hover:text-orange-300 transition-colors duration-300" href="#">Suggest a Product</a>
+</div>
+<button class="text-orange-900 dark:text-orange-200">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-20 px-6 md:px-12 max-w-screen-2xl mx-auto">
+<!-- Hero Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-32">
+<div class="lg:col-span-7">
+<p class="label-md text-primary mb-4">VOICES OF THE KITCHEN</p>
+<h1 class="font-headline display-lg text-on-surface mb-8">Refining our <br/><span class="italic font-normal">Shared Heritage.</span></h1>
+<p class="body-lg text-tertiary max-w-xl">
+                    Every recipe in our archive is a living document. We invite you to contribute to this legacy—whether through a memory of a flavor or a suggestion for a forgotten spice blend we should bring to your pantry.
+                </p>
+</div>
+<div class="lg:col-span-5 aspect-[4/5] relative group">
+<div class="absolute inset-0 bg-primary/5 -translate-x-4 translate-y-4 -z-10"></div>
+<img alt="Close-up of vibrant Indian spices including turmeric, dried chilies, and cardamom arranged on an aged wooden table with soft morning light" class="w-full h-full object-cover p-2 bg-surface-container-lowest" data-alt="Close-up of vibrant Indian spices including turmeric, dried chilies, and cardamom arranged on an aged wooden table with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWVQwr2qO1ho9JVN5BoCRILDaZoh56KHlZJrf4F2bd-vERWnEDPaZe31XjarQ8_9usLFKkmEMno_7cxqcFN1_KbO8r6bYc7XwwwlVFpJZR8kJC0AqXBAC16MYPacgFvylbSMXa1_AGqfy89bMP9SVmCqJdJ7SA5g9osL89zV9BiQit_PZsycp7Rktnk7tdFrViugsY7TOJnGFZlI6ywaAvnfFv0gErZWh2UHCsKrdwoiKj4cTIvyx_1oMuQsBCbFTCqKioUXqxWB_O"/>
+</div>
+</section>
+<!-- Testimonials Masonry / Asymmetric Layout -->
+<section class="mb-32">
+<div class="flex justify-between items-baseline mb-12">
+<h2 class="font-headline text-4xl text-on-surface">The Archive <span class="italic font-normal">Notes</span></h2>
+<span class="label-md text-secondary">482 TESTIMONIALS</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Testimonial 1 -->
+<div class="bg-surface-container-low p-10 flex flex-col justify-between min-h-[400px]">
+<div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-6" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="font-headline text-2xl leading-relaxed text-on-surface italic mb-8">
+                            "The Alleppey Fish Curry masala transport me straight back to my grandmother's veranda in Kerala. It's not just spice; it's a memory preserved."
+                        </p>
+</div>
+<div>
+<p class="font-bold text-primary">Meera Nair</p>
+<p class="label-md text-tertiary">BENGALURU, KA</p>
+</div>
+</div>
+<!-- Testimonial 2 (Offset) -->
+<div class="bg-surface-container-lowest p-10 mt-12 md:mt-0 flex flex-col justify-between shadow-sm">
+<div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-6" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="font-headline text-2xl leading-relaxed text-on-surface mb-8">
+                            "Finally, a brand that treats Indian regional snacks with the dignity they deserve. The Banana Chips are unparalleled."
+                        </p>
+</div>
+<div>
+<p class="font-bold text-primary">Aditya Sharma</p>
+<p class="label-md text-tertiary">LONDON, UK</p>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface-container-low p-10 flex flex-col justify-between min-h-[400px] lg:mt-24">
+<div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-6" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="font-headline text-2xl leading-relaxed text-on-surface italic mb-8">
+                            "The packaging is as beautiful as the product. It feels like receiving a curated gift from the past every time."
+                        </p>
+</div>
+<div>
+<p class="font-bold text-primary">Sophie Durand</p>
+<p class="label-md text-tertiary">PARIS, FR</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Suggest a Product Form -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-0 border-t border-outline-variant/10 pt-32">
+<div class="lg:col-span-5 mb-16 lg:mb-0 lg:pr-12">
+<h2 class="font-headline text-4xl text-on-surface mb-6">Suggest a <br/><span class="italic font-normal text-secondary">New Artifact.</span></h2>
+<p class="body-lg text-tertiary mb-8">
+                    Is there a specific masala powder, a forgotten heirloom grain, or a local snack from your hometown that we should explore for the Heritage Kitchen?
+                </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">history_edu</span>
+<div>
+<p class="title-sm">Heirloom Quality</p>
+<p class="text-sm text-tertiary">We focus on products with deep cultural roots.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">eco</span>
+<div>
+<p class="title-sm">Sustainable Sourcing</p>
+<p class="text-sm text-tertiary">Artisanal methods over mass production.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 bg-surface-container-low p-8 md:p-12">
+<form class="space-y-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="group relative">
+<label class="label-md text-tertiary block mb-2">FULL NAME</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 focus:ring-0 focus:border-primary px-0 py-2 transition-colors placeholder:text-stone-300" placeholder="Anjali Gupta" type="text"/>
+</div>
+<div class="group relative">
+<label class="label-md text-tertiary block mb-2">EMAIL ADDRESS</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 focus:ring-0 focus:border-primary px-0 py-2 transition-colors placeholder:text-stone-300" placeholder="anjali@archive.com" type="email"/>
+</div>
+</div>
+<div class="group relative">
+<label class="label-md text-tertiary block mb-2">PRODUCT NAME / CATEGORY</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 focus:ring-0 focus:border-primary px-0 py-2 transition-colors placeholder:text-stone-300" placeholder="e.g. Kolhapuri Thecha or Black Rice from Manipur" type="text"/>
+</div>
+<div class="group relative">
+<label class="label-md text-tertiary block mb-2">THE STORY / WHY THIS PRODUCT?</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant/30 focus:ring-0 focus:border-primary px-0 py-2 transition-colors placeholder:text-stone-300 resize-none" placeholder="Tell us about the origins, the flavor profile, and why it belongs in the Heritage Kitchen..." rows="4"></textarea>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pt-6">
+<div class="flex items-center gap-3">
+<input class="rounded-sm border-outline-variant text-secondary focus:ring-secondary" id="newsletter" type="checkbox"/>
+<label class="text-sm text-stone-600" for="newsletter">Notify me if this product enters the Archive</label>
+</div>
+<button class="bg-primary text-on-primary px-10 py-4 font-bold text-sm tracking-widest uppercase hover:bg-primary-container transition-all shadow-lg shadow-primary/10" type="submit">
+                            Submit Suggestion
+                        </button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f5f3ee] dark:bg-stone-950 w-full mt-20">
+<div class="py-16 px-12 grid grid-cols-1 md:grid-cols-3 gap-12 max-w-screen-2xl mx-auto items-start">
+<div>
+<span class="font-noto-serif text-lg font-black text-stone-800 dark:text-stone-200 block mb-6 uppercase tracking-widest">Heritage Kitchen</span>
+<p class="text-stone-500 font-manrope text-sm leading-relaxed max-w-xs">
+                    Curating the finest regional flavors of the Indian subcontinent. A project of preservation and taste.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<p class="label-md text-orange-900 mb-2">QUICK LINKS</p>
+<a class="text-stone-500 dark:text-stone-500 font-manrope text-sm tracking-widest uppercase hover:text-orange-700 dark:hover:text-orange-300 transition-colors" href="#">Shipping Policy</a>
+<a class="text-stone-500 dark:text-stone-500 font-manrope text-sm tracking-widest uppercase hover:text-orange-700 dark:hover:text-orange-300 transition-colors" href="#">Payments (Paytm/GPay)</a>
+<a class="text-stone-500 dark:text-stone-500 font-manrope text-sm tracking-widest uppercase hover:text-orange-700 dark:hover:text-orange-300 transition-colors" href="#">Contact Us</a>
+<a class="text-stone-500 dark:text-stone-500 font-manrope text-sm tracking-widest uppercase hover:text-orange-700 dark:hover:text-orange-300 transition-colors" href="#">Sustainability</a>
+</div>
+<div class="flex flex-col gap-6">
+<p class="label-md text-orange-900 mb-2">THE NEWSLETTER</p>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-stone-300 focus:ring-0 focus:border-orange-800 py-2 px-0 text-sm" placeholder="Your email address" type="email"/>
+<button class="absolute right-0 top-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined text-orange-900">arrow_forward</span>
+</button>
+</div>
+<p class="text-[10px] text-stone-400 uppercase tracking-tighter">© 2024 Heritage Kitchen. Preserving the Curated Archive of Indian Flavors.</p>
+</div>
+</div>
+</footer>
+</body></html>
